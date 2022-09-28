@@ -16,9 +16,6 @@ import {mapGetters, mapActions} from "vuex";
 export default {
   name: "Header",
   props: {
-    isOpen: {
-      type: Boolean
-    }
   },
   computed: {
     ...mapGetters([

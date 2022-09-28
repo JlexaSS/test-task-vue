@@ -2,6 +2,28 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Inter-Regular;
+  font-weight: 400;
+  font-style: normal;
+  src: url("@/assets/font/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: Inter-Medium;
+  font-weight: 500;
+  src: url("@/assets/font/Inter-Medium.ttf");
+}
+
 body {
+  font-family: Inter-Regular;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
   margin: 0;
+}
+
+a {
+  color: #C8D0D8;
+  text-decoration: none;
 }
