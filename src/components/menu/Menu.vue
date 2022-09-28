@@ -4,9 +4,9 @@
     :class="{active: !IS_MENU_OPEN}"
   >
     <div class="menu-top">
-      <a href="#" class="menu-top__logo">
+      <router-link to="/" class="menu-top__logo">
         <img src="../../images/logo.svg" alt="logo">
-      </a>
+      </router-link>
       <button
         class="menu-top__btn"
         @click="toggleMenu"
@@ -66,7 +66,7 @@ export default {
   height: 100vh;
   background-color: #21282F;
   transition: margin-left .3s ease;
-  
+
   &-top {
     display: flex;
     align-items: center;

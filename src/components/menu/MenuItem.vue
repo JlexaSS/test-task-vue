@@ -35,6 +35,7 @@ export default {
       display: flex;
       align-items: center;
       padding: 6px 24px;
+      transition: background-color .5s ease;
     }
     &__title{
       text-transform: uppercase;
@@ -53,5 +54,8 @@ export default {
       line-height: 20px;
       margin-left: 10px;
     }
+  }
+  .router-link-active {
+    background-color: #434A51;
   }
 </style>
