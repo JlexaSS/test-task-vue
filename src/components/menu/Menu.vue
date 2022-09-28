@@ -75,6 +75,10 @@ export default {
     margin-bottom: 18px;
   }
 
+  &-top__logo {
+    background-color: #21282F;
+  }
+
   &-top__btn {
     width: 24px;
     height: 24px;
