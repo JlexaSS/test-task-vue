@@ -1,0 +1,79 @@
+<template>
+  <nav
+    class="menu"
+    :class="{active: !IS_MENU_OPEN}"
+  >
+    <div class="menu-top">
+      <a href="#" class="menu-top__logo">
+        <img src="../../images/logo.svg" alt="logo">
+      </a>
+      <button
+        class="menu-top__btn"
+        @click="toggleMenu"
+      >
+        <img src="../../images/side-menu.svg" alt="menu-btn">
+      </button>
+    </div>
+    <MenuItem/>
+  </nav>
+</template>
+
+<script>
+import MenuItem from '@/components/menu/MenuItem'
+import {mapActions, mapGetters} from 'vuex'
+export default {
+  name: "Menu",
+  components: {
+    MenuItem
+  },
+  data() {
+    return {
+
+    }
+  },
+  computed: {
+    ...mapGetters([
+        'IS_MENU_OPEN'
+    ])
+  },
+  methods: {
+    ...mapActions([
+        'TOGGLE_MENU'
+    ]),
+    toggleMenu() {
+      this.TOGGLE_MENU();
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+.menu {
+  position: sticky;
+  min-width: 240px;
+  height: 100vh;
+  background-color: #21282F;
+  transition: margin-left .3s ease;
+
+  &-top {
+    display: flex;
+    align-items: center;
+    padding-top: 18px;
+    padding-left: 24px;
+    margin-bottom: 18px;
+  }
+
+  &-top__btn {
+    width: 24px;
+    height: 24px;
+    margin-left: 45px;
+    margin-bottom: 5px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+}
+.active {
+  margin-left: -240px;
+}
+</style>
