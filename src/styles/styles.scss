@@ -17,6 +17,12 @@
   src: url("@/assets/font/Inter-Medium.ttf");
 }
 
+@font-face {
+  font-family: Inter-Bold;
+  font-weight: 700;
+  src: url("@/assets/font/Inter-Bold.ttf");
+}
+
 body {
   font-family: Inter-Regular;
   font-weight: 400;

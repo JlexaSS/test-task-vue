@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/" class="posts-item">
+  <router-link :to="{name: 'PostPage', params: {idPost: post.id}}" class="posts-item">
     <p class="posts-item__title">{{ post.title.substring(0, 34) }}...</p>
     <p class="posts-item__text">{{ post.body.substring(0, 60) }}...</p>
   </router-link>
